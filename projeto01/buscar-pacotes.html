@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JM Viagens - Buscar Pacotes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2"><img src="logo.png" alt="Logo JM Viagens"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <nav>
+                    <a href="index.html">Home</a> |
+                    <a href="quem-somos.html">Quem Somos</a> |
+                    <a href="contato.html">Contato</a> |
+                    <a href="destinos.html">Destinos</a> |
+                    <a href="buscar-pacotes.html">Buscar Pacotes</a>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="content">
+                <h2>Buscar Pacotes de Viagem</h2>
+                <form>
+                    <label for="origem">Origem:</label><br>
+                    <input type="text" id="origem" name="origem"><br><br>
+                    <label for="destino">Destino:</label><br>
+                    <input type="text" id="destino" name="destino"><br><br>
+                    <label for="data-partida">Data de Partida:</label><br>
+                    <input type="date" id="data-partida" name="data-partida"><br><br>
+                    <label for="data-retorno">Data de Retorno:</label><br>
+                    <input type="date" id="data-retorno" name="data-retorno"><br><br>
+                    <label for="quartos">Quartos:</label><br>
+                    <input type="number" id="quartos" name="quartos"><br><br>
+                    <label for="adultos">Qtde Adultos:</label><br>
+                    <input type="number" id="adultos" name="adultos"><br><br>
+                    <label for="criancas">Qtde Crianças:</label><br>
+                    <input type="number" id="criancas" name="criancas"><br><br>
+                    <input type="submit" value="Buscar">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="content">
+                <footer>
+                    <p>&copy; 2025 JM Viagens. Todos os direitos reservados.</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
