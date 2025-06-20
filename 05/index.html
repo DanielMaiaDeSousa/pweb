@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
 <<<<<<< HEAD
     <title>JM  Viagens - Página Principal</title>
@@ -47,25 +48,74 @@
 =======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Site</title>
+    <title>Minha primeira página CSS</title>
+
     <style>
-        .title {
-            color: blue;
-            font-size: 24px;
+        body {
+            color: purple;
+            background-color: #d8da3d;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-left: 11em;
+
         }
-        #block {
-            background-color: lightgrey;
-            padding: 10px;
-            border: 1px solid black;
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.navbar li {
+            background-color: white;
+            margin: 0.5em 0;;
+            padding: 0.3em;
+            border-right: 1em solid black;
+        }
+        ul.navbar a {
+            text-decoration: none;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited{
+            color: purple;
+        }
+        h1 {
+            font-family: Helvetica, Arial, sans-serif;
         }
     </style>
+
 </head>
+
 <body>
-    <h1 class="title">Título com Seletor de Classe</h1>
-    <p style="color: red; border: 1px solid blue;">Parágrafo com Estilo Inline</p>
-    <div id="block">
-        Bloco com Estilo Incorporado no Head
-    </div>
+    <ul class="navbar">
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="pensamentos.html">Pensamentos</a></li>
+        <li><a href="cidade.html">Minha Cidade</a></li>
+        <li><a href="links.html">Links</a></li>
+    </ul>
+    <h1>Minha primeira página CSS</h1>
+
+    <p>Bem vindos à minha página estilizada!</p>
+
+    <p>Minha página não contém imagens, mas pelo
+        menos está estilizada.
+        Ela contém links, ainda que eles não levem
+        a lugar algum…
+    </p>
+
+    <p>Deveria haver mais textos aqui porém eu
+        ainda não decidi o que escrever.
+    </p>
+    <address>Construida em 20 de maio de 2025<br>
+  por mim mesmo.</address>
 </body>
+<<<<<<< HEAD
 </html>
 >>>>>>> 70b8b9b91f783ee3afb38175b55d185a3df65d55
+=======
+
+</html>
+>>>>>>> 570bea3adb1df3ec40c740b2454ae5efe5aeb23d
