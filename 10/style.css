@@ -1,0 +1,93 @@
+/* Estilo geral da página */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Menu Horizontal */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+.menu {
+    padding: 10px 20px;
+}
+
+/* Conteúdo Principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo dos links */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    background-color: yellow;
+    color: red;
+}
+
+a:active {
+    color: green;
+}
