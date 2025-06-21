@@ -6,37 +6,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Layout: Header Fixo com Sidebar -->
+    <!-- Header Fixo -->
     <header>
-        <h1>Header Fixo</h1>
+        <h1>Header</h1>
     </header>
+
+    <!-- Menu Horizontal -->
     <nav>
+        <div class="menu">Home</div>
+        <div class="menu">Menu</div>
         <div class="menu">Catalogue</div>
         <div class="menu">Locations</div>
         <div class="menu">Contact</div>
     </nav>
-    <aside>
-        <nav>
-            <ul>
-                <li>Main Menu</li>
-                <li>Option 1</li>
-                <li>Option 2</li>
-                <li>Option 3</li>
-            </ul>
-        </nav>
-    </aside>
+
+    <!-- Conteúdo Principal -->
     <main>
         <div class="left">Left 25%</div>
-        <div class="center">Center 50%</div>
+
+        <div class="center">
+            <h2>From X to Z</h2>
+            <p>Y would you want more?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+
+            <h3>Looking for a Gift?</h3>
+            <p>Find the perfect present for any occasion at GeneriCo's gift shop.</p>
+            <button>Gift Assistant</button>
+
+            <h3>Advanced Search</h3>
+            <input type="text" placeholder="Search">
+
+            <h3>Subscribe!</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
         <div class="right">Right 25%</div>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>Footer</p>
     </footer>
-
-    <!-- Caixas com posicionamento -->
-    <div class="caixa" id="absoluto">Absoluto</div>
-    <div class="caixa" id="relativo">Relativo</div>
-    <div class="caixa" id="fixo">Fixo</div>
 </body>
 </html>
