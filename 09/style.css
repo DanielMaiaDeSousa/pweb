@@ -45,12 +45,8 @@ body {
     box-sizing: border-box;
 }
 
-/* Layout 1: Header Fixo */
-#layout1 {
-    padding-top: 60px;
-}
-
-#layout1 header {
+/* Layout: Header Fixo com Sidebar */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +60,7 @@ body {
     z-index: 1000;
 }
 
-#layout1 nav {
+nav {
     display: flex;
     justify-content: space-around;
     background-color: #444;
@@ -73,46 +69,7 @@ body {
     margin-top: 60px;
 }
 
-#layout1 main {
-    display: flex;
-    margin-top: 20px;
-}
-
-#layout1 .left, #layout1 .center, #layout1 .right {
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-
-#layout1 .left {
-    width: 25%;
-}
-
-#layout1 .center {
-    width: 50%;
-}
-
-#layout1 .right {
-    width: 25%;
-}
-
-#layout1 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-/* Layout 2: Sidebar Fixa */
-#layout2 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-#layout2 aside {
+aside {
     position: fixed;
     top: 60px;
     left: 0;
@@ -123,14 +80,31 @@ body {
     padding: 20px;
 }
 
-#layout2 main {
+main {
     margin-left: 220px;
+    padding: 20px;
+    display: flex;
+}
+
+.left, .center, .right {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
 }
 
-#layout2 footer {
+.left {
+    width: 25%;
+}
+
+.center {
+    width: 50%;
+}
+
+.right {
+    width: 25%;
+}
+
+footer {
     background-color: #333;
     color: white;
     text-align: center;

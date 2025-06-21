@@ -6,47 +6,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Layout 1: Header Fixo -->
-    <section id="layout1">
-        <header>
-            <h1>Header Fixo</h1>
-        </header>
+    <!-- Layout: Header Fixo com Sidebar -->
+    <header>
+        <h1>Header Fixo</h1>
+    </header>
+    <nav>
+        <div class="menu">Catalogue</div>
+        <div class="menu">Locations</div>
+        <div class="menu">Contact</div>
+    </nav>
+    <aside>
         <nav>
-            <div class="menu">Catalogue</div>
-            <div class="menu">Locations</div>
-            <div class="menu">Contact</div>
+            <ul>
+                <li>Main Menu</li>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+            </ul>
         </nav>
-        <main>
-            <div class="left">Left 25%</div>
-            <div class="center">Center 50%</div>
-            <div class="right">Right 25%</div>
-        </main>
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </section>
+    </aside>
+    <main>
+        <div class="left">Left 25%</div>
+        <div class="center">Center 50%</div>
+        <div class="right">Right 25%</div>
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
 
-    <!-- Layout 2: Sidebar Fixa -->
-    <section id="layout2">
-        <header>
-            <h1>Header</h1>
-        </header>
-        <aside>
-            <nav>
-                <ul>
-                    <li>Main Menu</li>
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <p>Content</p>
-        </main>
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </section>
+    <!-- Caixas com posicionamento -->
+    <div class="caixa" id="absoluto">Absoluto</div>
+    <div class="caixa" id="relativo">Relativo</div>
+    <div class="caixa" id="fixo">Fixo</div>
 </body>
 </html>
