@@ -13,14 +13,21 @@ body {
 
 .imagem {
     width: 300px;
-    height: 200px;
+    height: auto;
     overflow: hidden;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .imagem img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.imagem p {
+    margin: 10px 0 0 0;
+    padding: 0;
 }
