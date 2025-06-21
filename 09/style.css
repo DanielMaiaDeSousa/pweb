@@ -1,0 +1,39 @@
+/* Estilo geral da página */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo base para todas as caixas */
+.caixa {
+    width: 200px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Caixa com posicionamento absoluto */
+#absoluto {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/* Caixa com posicionamento relativo */
+#relativo {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/* Caixa com posicionamento fixo */
+#fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
