@@ -37,3 +37,103 @@ body {
     bottom: 20px;
     right: 20px;
 }
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout 1: Header Fixo */
+#layout1 {
+    padding-top: 60px;
+}
+
+#layout1 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#layout1 nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+#layout1 main {
+    display: flex;
+    margin-top: 20px;
+}
+
+#layout1 .left, #layout1 .center, #layout1 .right {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#layout1 .left {
+    width: 25%;
+}
+
+#layout1 .center {
+    width: 50%;
+}
+
+#layout1 .right {
+    width: 25%;
+}
+
+#layout1 footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Layout 2: Sidebar Fixa */
+#layout2 header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#layout2 aside {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: #444;
+    color: white;
+    padding: 20px;
+}
+
+#layout2 main {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#layout2 footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
