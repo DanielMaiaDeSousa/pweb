@@ -4,25 +4,23 @@ body {
 }
 
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
     margin: 20px;
 }
 
 .imagem {
-    margin: 10px;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .imagem img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
-}
-.imagem p {
-    text-align: center;
-    font-size: 14px;
-    color: #333;
 }
