@@ -1,0 +1,23 @@
+article {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px;
+  background-color: #fff;
+}
+
+section {
+  width: 70%;
+  float: left;
+}
+
+aside {
+  width: 25%;
+  float: right;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+time {
+  font-style: italic;
+  color: gray;
+}
