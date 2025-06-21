@@ -21,3 +21,8 @@ body {
     height: auto;
     display: block;
 }
+.imagem p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
