@@ -1,0 +1,45 @@
+/* Estilos para o seletor id="menu" */
+#menu {
+    background-color: gray;
+    color: white;
+    padding: 10px; /* Adicionado para melhor visualização do menu */
+    text-align: center; /* Centraliza o texto do menu */
+}
+
+/* Estilos para o seletor id="conteudo" */
+#conteudo {
+    background-color: #CECE7B;
+    padding: 20px; /* Adicionado para espaçamento interno do conteúdo */
+    margin-top: 10px; /* Espaço entre o menu e o conteúdo */
+    margin-bottom: 10px; /* Espaço entre o conteúdo e o rodapé */
+}
+
+/* Estilos para o seletor id="rodape" */
+#rodape {
+    background-color: rgb(206, 141, 123);
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px; /* Centraliza o texto verticalmente no rodapé */
+    color: black; /* Cor do texto para contraste */
+}
+
+/* Estilos para a classe "copy" */
+.copy {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Estilos para todas as tags div para visualizar as bordas (conforme slide 44) */
+div {
+    border: 1px solid red;
+}
+
+/* Para testar as bordas do slide 47, você pode descomentar o código abaixo e comentar o acima */
+/*
+div {
+    border-style: solid;
+    border-width: 5px 10px 5px 5px; /* T R B L */
+/* border-color: red green gray blue;
+}
+*/
