@@ -1,17 +1,17 @@
-/* Estilo geral da página */
+
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
 
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header Fixo */
+
 header {
     position: fixed;
     top: 0;
@@ -26,7 +26,7 @@ header {
     z-index: 1000;
 }
 
-/* Menu Horizontal */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -40,7 +40,7 @@ nav {
     padding: 10px 20px;
 }
 
-/* Conteúdo Principal */
+
 main {
     display: flex;
     margin-top: 20px;
@@ -65,7 +65,7 @@ main {
     width: 25%;
 }
 
-/* Footer */
+
 footer {
     background-color: #333;
     color: white;
@@ -74,7 +74,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilo base para todas as caixas */
+
 .caixa {
     width: 200px;
     height: 100px;
@@ -87,21 +87,21 @@ footer {
     margin-top: 20px;
 }
 
-/* Caixa com posicionamento absoluto */
+
 #absoluto {
     position: absolute;
     top: 50px;
     left: 50px;
 }
 
-/* Caixa com posicionamento relativo */
+
 #relativo {
     position: relative;
     top: 20px;
     left: 20px;
 }
 
-/* Caixa com posicionamento fixo */
+
 #fixo {
     position: fixed;
     bottom: 20px;
