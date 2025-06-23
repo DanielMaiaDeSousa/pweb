@@ -1,17 +1,17 @@
-/* Estilo geral da página */
+
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
 
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header */
+
 header {
     background-color: #333;
     color: white;
@@ -19,7 +19,7 @@ header {
     padding: 20px 0;
 }
 
-/* Menu Horizontal */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -38,14 +38,14 @@ nav a:hover {
     background-color: #333;
 }
 
-/* Conteúdo Principal */
+
 main {
     display: flex;
     margin-top: 20px;
     padding: 20px;
 }
 
-/* Seção de Artigos */
+
 section {
     width: 70%;
     margin-right: 20px;
@@ -75,7 +75,7 @@ article footer {
     color: gray;
 }
 
-/* Barra Lateral */
+
 aside {
     width: 25%;
     background-color: #f9f9f9;
@@ -87,7 +87,7 @@ aside img {
     margin-bottom: 10px;
 }
 
-/* Footer */
+
 footer {
     background-color: #333;
     color: white;
