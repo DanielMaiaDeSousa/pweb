@@ -12,6 +12,16 @@
     <li class="pessoa" data-nome="José" data-idade="30" data-cpf="888"></li>
     <li class="pessoa" data-nome="Maria" data-idade="40" data-cpf="777"></li>
   </ul>
+
+  <script>
+    document.querySelectorAll('.pessoa').forEach(function(el) {
+      const nome = el.getAttribute('data-nome');
+      const idade = el.getAttribute('data-idade');
+      const cpf = el.getAttribute('data-cpf');
+      el.textContent = `Nome: ${nome} - Idade: ${idade} Anos - C.P.F: ${cpf}`;
+    });
+  </script>
 </body>
 </html>
+
 
