@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+/* Semicírculos */
+.semicirculos {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.semi {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100px 0 0 0;
+}
+
+.red    { background: red;    top: 0;   left: 0;   transform: rotate(0deg); }
+.orange { background: orange; top: 0;   right: 0;  transform: rotate(90deg); }
+.green  { background: green;  bottom: 0; right: 0; transform: rotate(180deg); }
+.purple { background: purple; bottom: 0; left: 0;  transform: rotate(270deg); }
+
+/* Quadrantes */
+.quadrantes {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.quad {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.quadrantes .red    { background: red;    top: 0;   left: 0; }
+.quadrantes .orange { background: orange; top: 0;   right: 0; }
+.quadrantes .green  { background: green;  bottom: 0; right: 0; }
+.quadrantes .purple { background: purple; bottom: 0; left: 0; }
