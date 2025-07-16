@@ -1,0 +1,10 @@
+.pessoa::before {
+  content: "Nome: " attr(data-nome) " - Idade: " attr(data-idade) " Anos - C.P.F: " attr(data-cpf);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pessoa {
+  color: black;
+}
