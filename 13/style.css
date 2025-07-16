@@ -1,0 +1,23 @@
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 15px;
+
+  /* Compatibilidade */
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+fieldset {
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+legend {
+  font-weight: bold;
+}
