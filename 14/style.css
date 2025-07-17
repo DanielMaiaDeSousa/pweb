@@ -1,0 +1,24 @@
+body {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.box {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparência */
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);   /* Sombra */
+  border-radius: 10px;
+}
+
+.box img {
+  width: 100%;
+}
