@@ -13,4 +13,7 @@
   padding: 10px;
   text-align: center;
 }
-
+.box img {
+  width: 100%;
+  border-radius: 10px;
+}   
