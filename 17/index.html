@@ -3,29 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atividade 17 - Grid Bootstrap</title>
-  < <img src="img/gato1.png" class="img-fluid" alt="Gato 1">
+  <title>Galeria de Gatos</title>
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+  <style>
+    .img-grid {
+      margin-bottom: 15px;
+    }
+    .img-full {
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Imagem grande à esquerda -->
+      <div class="col-lg-6 mb-4">
+        <img src="img/gato_grande.png" class="img-fluid w-100 img-full" alt="Gato grande">
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-        <img src="img/gato2.png" class="img-fluid" alt="Gato 2">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-        <img src="img/gato3.png" class="img-fluid" alt="Gato 3">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-             </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-        <img src="img/gato5.png" class="img-fluid" alt="Gato 5">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-        <img src="img/gato6.png" class="img-fluid" alt="Gato 6">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 coluna">
-        <img src="img/gato7.png" class="img-fluid" alt="Gato 7">
+
+      <!-- Grade de 6 imagens menores à direita -->
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-4 img-grid">
+            <img src="img/gato1.png" class="img-fluid" alt="Gato 1">
+          </div>
+          <div class="col-4 img-grid">
+            <img src="img/gato2.png" class="img-fluid" alt="Gato 2">
+          </div>
+          <div class="col-4 img-grid">
+            <img src="img/gato3.png" class="img-fluid" alt="Gato 3">
+          </div>
+          <div class="col-4 img-grid">
+            <img src="img/gato4.png" class="img-fluid" alt="Gato 4">
+          </div>
+          <div class="col-4 img-grid">
+            <img src="img/gato5.png" class="img-fluid" alt="Gato 5">
+          </div>
+          <div class="col-4 img-grid">
+            <img src="img/gato6.png" class="img-fluid" alt="Gato 6">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
 </body>
 </html>
-
