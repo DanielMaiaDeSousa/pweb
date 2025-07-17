@@ -1,0 +1,14 @@
+.conteudo {
+  border: 2px solid #ccc;
+  padding: 20px;
+}
+
+.linha {
+  margin-bottom: 20px;
+}
+
+.coluna {
+  padding: 10px;
+  border: 1px dashed #999;
+  text-align: center;
+}
