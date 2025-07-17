@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f0f0f0;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #3498db;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  animation: girarMudarCor 10s infinite;
+}
+
+/* Transição ao passar o mouse */
+.box:hover {
+  transform: scale(1.1);
+  background-color: #2ecc71;
+}
+
+/* Animação com keyframes */
+@keyframes girarMudarCor {
+  0% {
+    transform: rotate(0deg);
+    background-color: #3498db;
+  }
+  25% {
+    transform: rotate(90deg);
+    background-color: #e74c3c;
+  }
+  50% {
+    transform: rotate(180deg);
+    background-color: #f1c40f;
+  }
+  75% {
+    transform: rotate(270deg);
+    background-color: #9b59b6;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: #3498db;
+  }
+}
