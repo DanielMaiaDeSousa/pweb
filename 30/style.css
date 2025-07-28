@@ -1,14 +1,49 @@
-.pessoa{
-    color: Blue;
+h1{
+    clear: both;
 }
-.pessoa[data-idade='26']{
-    color: #0aff70;
+#efect1{
+    width: 300px;
+    height: 300px;
+    float: left;
 }
-
-.pessoa::before{
-    content: "Nome: ";
+#efect2{
+    width: 300px;
+    height: 300px;
+    float: left;
 }
-
-.pessoa::after{
-    content: " - Idade: " attr(data-idade) " Anos - CPF: " attr(data-CPF);
+.div1{
+    margin-left: 20%;
+    background-color: #BB2020;
+    border-radius: 100px 300px 0px 300px;
+}
+.div2{
+    background-color: #06111C;
+    border-radius: 300px 100px 300px 0px;
+}
+.div3{
+    margin-left: 20%;
+    background-color: #FFEB4D;
+    border-radius: 300px 0px 300px 100px;
+}
+.div4{
+    background-color: #BEC7C7;
+    border-radius: 0px 300px 100px 300px;
+}
+.div5{
+    margin-left: 20%;
+    background-color: #BB2020;
+    border-radius: 3600px 0px 0px 0px;
+}
+.div6{
+    background-color: #06111C;
+    border-radius: 0px 3600px 0px 0px;
+}
+.div7{
+    margin-left: 20%;
+    background-color: #FFEB4D;
+    border-radius: 0px 0px 0px 3600px;
+}
+.div8{
+    background-color: #BEC7C7;
+    border-radius: 0px 0px 3600px 0px;
 }

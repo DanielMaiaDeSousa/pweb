@@ -1,52 +1,50 @@
-body {
-  font-family: sans-serif;
-  text-align: center;
-  margin-top: 40px;
+h1{
+    clear: both;
 }
-
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 40px;
+#efect1{
+    width: 300px;
+    height: 300px;
+    float: left;
 }
-
-/* Semicírculos */
-.semicirculos {
-  position: relative;
-  width: 200px;
-  height: 200px;
+#efect2{
+    width: 300px;
+    height: 300px;
+    float: left;
 }
-
-.semi {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  border-radius: 100px 0 0 0;
+.div1{
+    margin-left: 20%;
+    background-color: #BB2020;
+    border-radius: 100px 300px 0px 300px;
 }
-
-.red    { background: red;    top: 0;   left: 0;   transform: rotate(0deg); }
-.orange { background: orange; top: 0;   right: 0;  transform: rotate(90deg); }
-.green  { background: green;  bottom: 0; right: 0; transform: rotate(180deg); }
-.purple { background: purple; bottom: 0; left: 0;  transform: rotate(270deg); }
-
-/* Quadrantes */
-.quadrantes {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
+.div2{
+    background-color: #06111C;
+    border-radius: 300px 100px 300px 0px;
 }
-
-.quad {
-  width: 100px;
-  height: 100px;
-  position: absolute;
+.div3{
+    margin-left: 20%;
+    background-color: #FFEB4D;
+    border-radius: 300px 0px 300px 100px;
 }
-
-.quadrantes .red    { background: red;    top: 0;   left: 0; }
-.quadrantes .orange { background: orange; top: 0;   right: 0; }
-.quadrantes .green  { background: green;  bottom: 0; right: 0; }
-.quadrantes .purple { background: purple; bottom: 0; left: 0; }
+.div4{
+    background-color: #BEC7C7;
+    border-radius: 0px 300px 100px 300px;
+}
+.div5{
+    margin-left: 20%;
+    background-color: #BB2020;
+    border-radius: 3600px 0px 0px 0px;
+}
+.div6{
+    background-color: #06111C;
+    border-radius: 0px 3600px 0px 0px;
+}
+.div7{
+    margin-left: 20%;
+    background-color: #FFEB4D;
+    border-radius: 0px 0px 0px 3600px;
+}
+.div8{
+    background-color: #BEC7C7;
+    border-radius: 0px 0px 3600px 0px;
+}
 
