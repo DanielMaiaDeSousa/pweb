@@ -3,27 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exemplo de Alertas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Alertas e Formulário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="bg-light p-4">
 
-  <h2>Alerts</h2>
+  <div class="container">
+    <h2 class="mb-4">Alertas com Ícones, Links e Fechamento</h2>
 
-  <div class="alert alert-success" role="alert">
-    <strong>Success!</strong> Indicates a successful or positive action.
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="bi bi-check-circle-fill me-2"></i>
+      <div>
+        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+      </div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="bi bi-info-circle-fill me-2"></i>
+      <div>
+        <strong>Info!</strong> You can <a href="#" class="alert-link">learn more here</a>.
+      </div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-triangle-fill me-2"></i>
+      <div>
+        <strong>Warning!</strong> Please <a href="#" class="alert-link">check the details</a>.
+      </div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+      <i class="bi bi-x-circle-fill me-2"></i>
+      <div>
+        <strong>Danger!</strong> Be sure to <a href="#" class="alert-link">review this warning</a>.
+      </div>
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <h2 class="mt-5 mb-3">Formulário</h2>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="categoria" class="form-label">Categoria</label>
+            <select class="form-select" id="categoria" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="1">Categoria 1</option>
+              <option value="2">Categoria 2</option>
+              <option value="3">Categoria 3</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor, selecione uma categoria.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="situacao" class="form-label">Situação</label>
+            <select class="form-select" id="situacao" required>
+              <option value="">Selecione uma situação</option>
+              <option value="1">Ativo</option>
+              <option value="2">Inativo</option>
+              <option value="3">Pendente</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor, selecione uma situação.
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="reset" class="btn btn-secondary me-2">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <div class="alert alert-info" role="alert">
-    <strong>Info!</strong> Indicates a neutral informative change or action.
-  </div>
-
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Indicates a warning that might need attention.
-  </div>
-
-  <div class="alert alert-danger" role="alert">
-    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+         .checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
 </body>
 </html>
+          <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição</label>
+              <textarea class="form-control" id="descricao" rows="3" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal de Edição -->
+  <div class="modal fade" id="modalEdicao" tabindex="-1" aria-labelledby="modalEdicaoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEdicaoLabel">Edição de Produto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="nomeEdit" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nomeEdit" required>
+            </div>
+            <div class="mb-3">
+              <label for="precoEdit" class="form-label">Preço</label>
+              <input type="text" class="form-control" id="precoEdit" required>
+            </div>
+            <div class="mb-3">
+              <label for="categoriaEdit" class="form-label">Categoria</label>
+              <input type="text" class="form-control" id="categoriaEdit" required>
+            </div>
+            <div class="mb-3">
+              <label for="situacaoEdit" class="form-label">Situação</label>
+              <select class="form-select" id="situacaoEdit" required> 
+                <option value="Ativo">Ativo</option>
+                <option value="Inativo">Inativo</option>
+                <option value="Pendente">Pendente</option>
+              </select>
+            </div>  
