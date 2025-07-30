@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 21 - Bootstrap</title>
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+</head>
+<body class="p-4">
+
+  <div class="container">
+    <h3>Alerts</h3>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Este é um alerta com <a href="#" class="alert-link">link de exemplo</a>.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+    </div>
+
+    <h3 class="mt-5">Tooltips</h3>
+    <button type="button" class="btn btn-success me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Tocar música">
+      Tocar
+    </button>
+    <button type="button" class="btn btn-warning me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Pausar música">
+      Pausar
+    </button>
+    <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Parar música">
+      Parar
+    </button>
+
+    <h3 class="mt-5">Popovers</h3>
+    <button type="button" class="btn btn-info" data-bs-toggle="popover" title="Informação" data-bs-content="Este é um popover de exemplo.">
+      Clique para ver
+    </button>
+  </div>
+
+  <!-- Bootstrap JS + Inicialização de Tooltips e Popovers -->
+  https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    popoverTriggerList.forEach(el => new bootstrap.Popover(el));
+  </script>
+</body>
+</html>
