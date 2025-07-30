@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Viagens - Contato</title>
+</head>
+<body>
+    <table border="0" width="95%" align="center">
+        <tr>
+            <td>
+                <img src="imagens/logo.png" />
+            </td>
+
+            <td align="right">
+                <a href="index.html">Home</a>
+                <a href="quem-somos.html">Quem Somos</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="">Contato</a>
+                <a href="select-destino.html">Comprar Pacotes</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h1>Contato</h1>
+                <form action="http://191.252.62.149:8080/pweb/salvar.jsp" method="post">
+                    <p style="font-size: large;"><b>Nome: <br> </b><input type="text" name="nome"></p>
+                    <p style="font-size: large;"><b>Email: <br></b><input type="text" name="email"></p>
+                    <p style="font-size: large;"><b>Assunto: </b>
+                    <select name="assunto" >
+                        <option value="" selected>Selecione o assunto</option>
+                        <option value="Melhorias">Melhorias</option>
+                        <option value="Duvidas">Duvidas</option>
+                        <option value="Problemas com site">Problemas com site</option>
+                    </select>
+                    <p style="font-size: large;"><b>Observações: </b>
+                    <textarea name="" placeholder="Digite as observações"></textarea>
+                    <input type="submit" value="Enviar"><p></p>  
+                </form>
+            </td>            
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>Email: jmviagens-contato@jm.com</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <h4>Todos os direitos reservados</h4>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

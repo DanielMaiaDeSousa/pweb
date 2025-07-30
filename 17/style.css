@@ -1,16 +1,6 @@
-.conteudo {
-  border: 2px solid #007bff;
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-.linha {
-  margin-bottom: 20px;
-}
-
-.coluna {
-  border: 1px dashed #6c757d;
-  padding: 10px;
-  text-align: center;
+.bloco {
+    background-color: blue;
+    height: 100px;
+    border: solid 1px steelblue;
 }
 
