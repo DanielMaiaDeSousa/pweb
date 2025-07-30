@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilos personalizados para ajustar conforme a imagem, se necessário */
+        body {
+            padding-top: 20px;
+            background-color: #f8f9fa; /* Um cinza claro para o fundo, parecido com a imagem */
+        }
+        .card-header {
+            background-color: #f0f8ff; /* Um azul bem claro para o cabeçalho do card, como na imagem */
+            border-bottom: 1px solid #dee2e6;
+        }
+        /* Estilo para garantir que o texto dos botões dentro do popover não quebre linha */
+        .popover .btn {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-clock-history"></i> Pedidos Recentes</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-person-fill-up"></i> Enviar Cliente</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-wallet-fill"></i> Receber Pagamento</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-list-check"></i> Todos os Pedidos</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-box-seam"></i> Novo pedido</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary me-2" type="button"><i class="bi bi-house-door-fill"></i> Página Principal</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                Pesquisa de Produtos
+                <div>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="descricaoProduto" class="form-label visually-hidden">Descrição</label> <input type="text" class="form-control" id="descricaoProduto" placeholder="Descrição">
+                </div>
+                <div class="d-flex justify-content-start">
+                    <button type="button" class="btn btn-primary me-2"><i class="bi bi-search"></i> Pesquisar</button>
+                    <button type="button" class="btn btn-secondary me-2"><i class="bi bi-arrow-clockwise"></i> Recarregar</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#novoProdutoModal"><i class="bi bi-file-earmark-plus"></i> Novo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+            <div class="col-md-auto">
+                <select class="form-select form-select-sm" aria-label="Registros por página">
+                    <option selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                </select>
+                <small class="text-muted">Registro por página</small>
+            </div>
+            <div class="col-md-auto ms-auto">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text">Busca:</span>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID <i class="bi bi-caret-up-fill text-muted"></i></th> <th>Descrição <i class="bi bi-caret-up-fill text-muted"></i></th>
+                    <th>Situação <i class="bi bi-caret-up-fill text-muted"></i></th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pizza</td>
+                    <td><span class="badge bg-success">Ativo</span></td>
+                    <td>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes [cite: 47]"><i class="bi bi-file-text"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar [cite: 48]"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-html="true" data-bs-content='Deseja realmente remover esse registro?<br><div class="d-flex justify-content-center mt-2"><button type="button" class="btn btn-primary btn-sm me-1"><i class="bi bi-check-lg"></i> Sim</button><button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-x-lg"></i> Não</button></div>' title=""><i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Refrigerante</td>
+                    <td><span class="badge bg-success">Ativo</span></td>
+                    <td>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes [cite: 47]"><i class="bi bi-file-text"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar [cite: 48]"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-html="true" data-bs-content='Deseja realmente remover esse registro?<br><div class="d-flex justify-content-center mt-2"><button type="button" class="btn btn-primary btn-sm me-1"><i class="bi bi-check-lg"></i> Sim</button><button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-x-lg"></i> Não</button></div>' title=""><i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Cajuína</td>
+                    <td><span class="badge bg-danger">Inativo</span></td>
+                    <td>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes [cite: 47]"><i class="bi bi-file-text"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar [cite: 48]"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-html="true" data-bs-content='Deseja realmente remover esse registro?<br><div class="d-flex justify-content-center mt-2"><button type="button" class="btn btn-primary btn-sm me-1"><i class="bi bi-check-lg"></i> Sim</button><button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-x-lg"></i> Não</button></div>' title=""><i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Borda</td>
+                    <td><span class="badge bg-success">Ativo</span></td>
+                    <td>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes [cite: 47]"><i class="bi bi-file-text"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar [cite: 48]"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-html="true" data-bs-content='Deseja realmente remover esse registro?<br><div class="d-flex justify-content-center mt-2"><button type="button" class="btn btn-primary btn-sm me-1"><i class="bi bi-check-lg"></i> Sim</button><button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-x-lg"></i> Não</button></div>' title=""><i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="novoProdutoModal" tabindex="-1" aria-labelledby="novoProdutoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="novoProdutoModalLabel">Cadastrar Novo Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeProduto" class="form-label">Nome [cite: 54]</label>
+                            <input type="text" class="form-control" id="nomeProduto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precoProduto" class="form-label">Preço [cite: 55]</label>
+                            <input type="number" class="form-control" id="precoProduto" step="0.01">
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoriaProduto" class="form-label">Categoria [cite: 56]</label>
+                            <input type="text" class="form-control" id="categoriaProduto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="situacaoProduto" class="form-label">Situação(status) [cite: 57]</label>
+                            <select class="form-select" id="situacaoProduto">
+                                <option selected value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Produto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inicialização de Tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // Inicialização de Popovers
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+</html>
