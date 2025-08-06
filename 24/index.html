@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de Programação Web - JQuery e API</title>
+    <style>
+        /* Estilos globais para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilo para os contêineres de cada seção, garantindo separação e visual similar */
+        .section-container {
+            max-width: 960px; /* Largura máxima para ambas as seções */
+            margin: 20px auto; /* Centraliza e adiciona margem superior/inferior */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border-radius: 8px; /* Cantos arredondados */
+        }
+
+        /* Estilos específicos para a seção de Seleção de Elementos com JQuery */
+        #jquery-section .header-bar {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #jquery-section .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
+        }
+        #jquery-section .col-md-4 {
+            width: 32%; /* Aproximadamente 1/3 da largura do contêiner */
+            box-sizing: border-box; /* Inclui padding e borda na largura total */
+            padding: 10px;
+        }
+        #jquery-section h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        #jquery-section p {
+            padding: 10px;
+            margin: 5px 0;
+            color: #fff;
+        }
+        #jquery-section p:nth-of-type(1) {
+            background-color: #007bff; /* Azul para o primeiro parágrafo */
+        }
+        #jquery-section p:nth-of-type(2) {
+            background-color: #28a745; /* Verde para o segundo parágrafo */
+        }
+        #jquery-section .caixa1 {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: inline-block; /* Permite que as caixas fiquem lado a lado */
+        }
+        #jquery-section .caixa1:nth-of-type(1) {
+            background-color: #007bff;
+        }
+        #jquery-section .caixa1:nth-of-type(2) {
+            background-color: #28a745;
+        }
+        #jquery-section input[type="text"] {
+            display: block; /* Cada input em sua própria linha */
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #jquery-section button {
+            background-color: #dc3545; /* Vermelho para botões de "Esconder" */
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #jquery-section button:hover {
+            background-color: #c82333;
+        }
+        #jquery-section button:nth-of-type(even) {
+            background-color: #28a745; /* Verde para botões de "Exibir" */
+        }
+        #jquery-section button:nth-of-type(even):hover {
+            background-color: #218838;
+        }
+
+        /* Estilos específicos para a seção de Consulta de CEP */
+        #viacep-section h1 {
+            text-align: center;
+        }
+        #viacep-section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #viacep-section input[type="text"] {
+            /* Ajuste a largura para que o botão "Clique" possa ficar ao lado */
+            width: calc(100% - 110px); /* 100% menos a largura aproximada do botão e margem */
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: inline-block; /* Permite que o input e o botão fiquem na mesma linha */
+        }
+        #viacep-section button {
+            padding: 8px 16px;
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            vertical-align: top; /* Alinha o botão com o topo do input */
+            margin-top: 5px;
+            margin-left: 5px; /* Pequena margem entre input e botão */
+        }
+        #viacep-section button:hover {
+            background-color: #d8d8d8;
+        }
+
+        /* Estilo para o separador visual entre as seções */
+        .separator {
+            margin: 40px auto; /* Margem para separar bem as seções */
+            width: 80%; /* Largura do separador */
+            border: 0;
+            border-top: 2px dashed #ccc; /* Linha tracejada */
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            #jquery-section .col-md-4 {
+                width: 100%; /* Em telas menores, as colunas ocupam a largura total */
+                margin-bottom: 20px;
+            }
+            #viacep-section input[type="text"] {
+                width: 100%; /* Input ocupa 100% da largura */
+                margin-right: 0;
+            }
+            #viacep-section button {
+                width: 100%; /* Botão ocupa 100% da largura */
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção 1: Selecionando Elementos com JQuery -->
+    <div class="section-container" id="jquery-section">
+        <div class="header-bar">
+            SELECIONANDO ELEMENTOS COM JQUERY
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Parágrafos (p)</h3>
+                <p>Este é um parágrafo</p>
+                <p>Este é outro parágrafo</p>
+                <button onclick="exibirOcultarTAG('p', false)">Esconder parágrafos</button>
+                <button onclick="exibirOcultarTAG('p', true)">Exibir parágrafos</button>
+            </div>
+            <div class="col-md-4">
+                <h3>Divisões (div)</h3>
+                <div class="caixa1"></div>
+                <div class="caixa1"></div>
+                <br>
+                <button onclick="exibirOcultarClasse('caixa1', false)">Esconder divs</button>
+                <button onclick="exibirOcultarClasse('caixa1', true)">Exibir divs</button>
+            </div>
+            <div class="col-md-4">
+                <h3>Campos (input)</h3>
+                <input type="text" id="campo1" value="input ID 01">
+                <input type="text" id="campo2" value="input ID 02">
+                <br>
+                <button onclick="exibirOcultarID('campo1', false)">Esconder input ID 1</button>
+                <button onclick="exibirOcultarID('campo1', true)">Exibir input ID 1</button>
+                <br>
+                <button onclick="exibirOcultarID('campo2', false)">Esconder input ID 2</button>
+                <button onclick="exibirOcultarID('campo2', true)">Exibir input ID 2</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Separador visual entre as seções -->
+    <hr class="separator">
+
+    <!-- Seção 2: Consulta de Endereço com VIACEP -->
+    <div class="section-container" id="viacep-section">
+        <h1>Consulta de Endereço com VIACEP</h1>
+        
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value="" placeholder="Somente números" size="10" maxlength="9"/>
+            <button id="mybtn">Clique</button>
+        </label>
+
+        <hr/>
+    
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60"/>
+        </label>
+        
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40"/>
+        </label>
+        
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40"/>
+        </label>
+        
+        <label>Estado:
+            <input name="uf" type="text" id="uf" size="2"/>
+        </label>
+        
+        <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8"/>
+        </label>
+    </div>
+
+    <!-- Inclui a biblioteca jQuery (apenas uma vez para toda a página) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // Funções JavaScript para a seção de Seleção de Elementos (JQuery)
+        function exibirOcultarTAG(tag, flag) {
+            if (flag) {
+                $(tag).show();
+            } else {
+                $(tag).hide();
+            }
+        }
+        function exibirOcultarClasse(classe, flag) {
+            if (flag) {
+                $('.' + classe).show();
+            } else {
+                $('.' + classe).hide();
+            }
+        }
+        function exibirOcultarID(id, flag) {
+            if (flag) {
+                $('#' + id).show();
+            } else {
+                $('#' + id).hide();
+            }
+        }
+
+        // Script para a seção de Consulta de CEP (ViaCEP)
+        // O $(document).ready() garante que o código só é executado quando o DOM está pronto.
+        $(document).ready(function() {
+            $("#mybtn").click(function() {
+                var cep = $("#cep").val(); // Obtém o valor do CEP digitado
+                
+                // Preenche os campos com "..." enquanto a consulta é realizada
+                $("#rua").val("...");
+                $("#bairro").val("...");
+                $("#cidade").val("...");
+                $("#uf").val("...");
+                $("#ibge").val("...");
+
+                var url = "https://viacep.com.br/ws/" + cep + "/json/"; // Monta a URL da API ViaCEP
+                
+                // Realiza a requisição GET JSON para a API ViaCEP
+                $.getJSON(url, function(retorno) {
+                    if (!("erro" in retorno)) { // Verifica se a resposta não contém erro
+                        // Preenche os campos do formulário com os dados retornados pela API
+                        $("#rua").val(retorno.logradouro);
+                        $("#bairro").val(retorno.bairro);
+                        $("#cidade").val(retorno.localidade);
+                        $("#uf").val(retorno.uf);
+                        $("#ibge").val(retorno.ibge);
+                    } else {
+                        // Se o CEP não for encontrado, exibe um alerta
+                        alert("CEP pesquisado não foi encontrado.");
+                    }
+                });
+            });
+        });
+    </script>
